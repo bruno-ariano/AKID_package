@@ -60,7 +60,7 @@ for seq_record in SeqIO.parse(dir_path + "/tmp/domain_found.fasta", "fasta"):
 		sequences_output=open(dir_path + "/tmp/kinase_sequences/" + seq_record.id,"w")
 		sequences_output.write(str(domain[seq_record.id])[1:-1])
 		sequences_output.close()
-		os.system(dir_path + "/PACKAGES/hmmer-3.1b2-linux-intel-x86_64/binaries/hmmalign -o " + dir_path + "/tmp/alignments/align_"+seq_record.id+" "+ dir_path+"/db/hmmdb/CompleteKinomeAlignmentManuallyRefined_v3.hmm" + " " + dir_path + "/tmp/kinase_sequences/"+seq_record.id)
+		os.system("hmmalign -o " + dir_path + "/tmp/alignments/align_"+seq_record.id+" "+ dir_path+"/db/hmmdb/CompleteKinomeAlignmentManuallyRefined_v3.hmm" + " " + dir_path + "/tmp/kinase_sequences/"+seq_record.id)
 		print "mapping " + seq_record.id
 		diz1=mapping_position(">" + seq_record.id, dir_path + "/tmp/alignments/align_" + seq_record.id,  dir_path + "/tmp/dictionary/diz_"+seq_record.id)
 		a1=AlignIO.read(open(dir_path + "/tmp/alignments/align_" + seq_record.id,"r"),"stockholm")
