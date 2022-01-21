@@ -114,9 +114,9 @@ def write_domain_from_table(fasta_sequence, table, destination):
 def find_domain(directory,arg1):
     dict_domain={}
     dir_path = directory
-    os.system(dir_path+"/PACKAGES/hmmer-3.1b2-linux-intel-x86_64/binaries/hmmscan --domtblout " + dir_path + "/tmp/domain_kinase_t " + dir_path + "/db/hmmdb/CompleteKinomeAlignmentManuallyRefined_v3.hmm "+arg1 + " > output_hmm")
+    os.system("hmmscan --domtblout " + dir_path + "/tmp/domain_kinase_t " + dir_path + "/db/hmmdb/CompleteKinomeAlignmentManuallyRefined_v3.hmm "+arg1 + " > output_hmm")
     os.system("rm " + dir_path +"/output_hmm")
-    #subprocess.call(["/PACKAGES/hmmer-3.1b2-linux-intel-x86_64/binaries/hmmscan","--domtblout " + dir_path + "/output/tmp/domain_kinase_t " + dir_path + "/db/hmmdb/CompleteKinomeAlignmentManuallyRefined_v3.hmm "+arg1])
+    #subprocess.call(["hmmscan","--domtblout " + dir_path + "/output/tmp/domain_kinase_t " + dir_path + "/db/hmmdb/CompleteKinomeAlignmentManuallyRefined_v3.hmm "+arg1])
     os.system("python "+dir_path+"/script/parse_domain_table.py -f " + dir_path + "/tmp/domain_kinase_t")
     dict_domain=write_domain_from_table(arg1, dir_path + "/tmp/domain_kinase_t.out",  dir_path + "/tmp/domain_found.fasta")
     if len(dict_domain)==0:
