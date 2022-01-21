@@ -5,7 +5,7 @@
 ###########################
 
 
-# This tool require: an R-cran version >=3.1, Biopython1.68, hmmer3.1b2
+# This tool require: an R-cran version >=3.1, Biopython >=1.68, hmmer>=3.1b2, python>=3.0
 
 # To install the network:
 
