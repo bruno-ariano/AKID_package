@@ -10,7 +10,6 @@ from Bio.Align import MultipleSeqAlignment
 import subprocess
 import re
 import sys
-sys.path.append(os.getcwd()+"/PACKAGES/biopython-1.68")
 dir_path = os.getcwd()
 def determinants(f1):
     determinanti=open(f1,"r").read().split("\n")
