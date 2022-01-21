@@ -10,7 +10,6 @@ import glob
 from Bio import AlignIO
 import argparse
 from functions import code_fasta_file
-sys.path.append(os.getcwd()+"/PACKAGES/biopython-1.68")
 dir_path = os.getcwd()
 usage = """%(prog)s reads determinants and peptide files and returns the probability of interaction between kinases and peptides."""
 p = argparse.ArgumentParser(description=usage)
