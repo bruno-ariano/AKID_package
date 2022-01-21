@@ -8,7 +8,6 @@ import os,sys,time,sys
 from functions import mapping_position, determinants,find_domain,select_peptide_window
 import argparse
 from Bio import AlignIO, SeqIO
-sys.path.append(os.getcwd()+"/PACKAGES/biopython-1.68")
 directory=os.getcwd()
 usage = """%(prog)s reads fasta sequence file and return the determinants of the kinase domains)."""
 p = argparse.ArgumentParser(description=usage)
