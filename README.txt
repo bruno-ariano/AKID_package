@@ -1,4 +1,4 @@
-# Prediction of kinase peptide interaction in Eukaryotic organisms using aminoacid sequences information (Parca et al. 2019)
+# Prediction of kinase peptide interaction in Eukaryotic organisms using aminoacid sequences information (Parca L.*, Ariano B*, et al. 2019)
 
 ###########################
 #                         #
